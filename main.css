@@ -1,0 +1,31 @@
+/* Write your CSS code in this file */
+h1 {
+    color: purple;
+    font-family: helvetica;
+}
+
+h2 {
+    color: blue;
+}
+
+ul {
+    background-color: whitesmoke;
+    width: 100px;
+}
+
+#one {
+    color: rgb(255, 0, 250);
+}
+#two {
+    color: rgb(255, 0, 150);
+}
+#three {
+    color: rgb(255, 0, 50);
+}
+#four {
+    color: rgb(255, 0, 0);
+}
+
+h3 {
+    color: blue;
+}
