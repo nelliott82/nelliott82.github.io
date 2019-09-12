@@ -104,7 +104,6 @@ function makeGuess(){
     })
     clearButton.addEventListener('click', function() {
         startGame.pastGuesses = [];
-        startGame.winningNumber = generateWinningNumber();
         document.querySelector('#messages>h2').innerHTML = '';
         document.querySelector('#hint>h2').innerHTML = '';
         document.querySelector('#number-of-guesses>h3').innerHTML = `You have 5 guesses! Good luck!`
@@ -113,6 +112,8 @@ function makeGuess(){
         document.getElementById('three').innerHTML = '-';
         document.getElementById('four').innerHTML = '-';
         makeGuess();
+        let newWinNum = generateWinningNumber();
+        startGame.winningNumber = newWinNum;
     })
     hintButton.addEventListener('click', function() {
         let hintArr = startGame.provideHint();
