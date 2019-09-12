@@ -104,6 +104,7 @@ function makeGuess(){
     })
     clearButton.addEventListener('click', function() {
         startGame.pastGuesses = [];
+        startGame.winningNumber = generateWinningNumber();
         document.querySelector('#messages>h2').innerHTML = '';
         document.querySelector('#hint>h2').innerHTML = '';
         document.querySelector('#number-of-guesses>h3').innerHTML = `You have 5 guesses! Good luck!`
