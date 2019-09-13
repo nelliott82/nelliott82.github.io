@@ -121,4 +121,4 @@ function makeGuess(){
 }
 
 
-makeGuess()
+makeGuess();
