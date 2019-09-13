@@ -103,6 +103,9 @@ function makeGuess(){
         document.querySelector('#number-of-guesses>h3').innerHTML = `You have ${numberOfGuesses} guesses left! Keep trying!`
     })
     clearButton.addEventListener('click', function() {
+        startGame.pastGuesses = [];
+        startGame.winningNumber = generateWinningNumber();
+        startGame.provideHint();
         document.querySelector('#messages>h2').innerHTML = '';
         document.querySelector('#hint>h2').innerHTML = '';
         document.querySelector('#number-of-guesses>h3').innerHTML = `You have 5 guesses! Good luck!`
@@ -110,7 +113,6 @@ function makeGuess(){
         document.getElementById('two').innerHTML = '-';
         document.getElementById('three').innerHTML = '-';
         document.getElementById('four').innerHTML = '-';
-        let startGame = newGame();
     })
     hintButton.addEventListener('click', function() {
         let hintArr = startGame.provideHint();
